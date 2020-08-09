@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Attributions</title>
+    <title>The Map</title>
     <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
@@ -10,22 +10,23 @@
   <body>
     <div id="map" class="map"></div>
     <script>
-      var attribution = new ol.control.Attribution({
-        collapsible: false
-      });
-      var map = new ol.Map({
-        layers: [
-          new ol.layer.Tile({
-            source: new ol.source.OSM()
-          })
-        ],
-        controls: ol.control.defaults({attribution: false}).extend([attribution]),
-        target: 'map',
-        view: new ol.View({
-          center: [0, 0],
-          zoom: 2
-        })
-      });
+      	import Map from 'ol/Map';
+		import View from 'ol/View';
+		import TileLayer from 'ol/layer/Tile';
+		import OSM from 'ol/source/OSM';
+
+		var map = new Map({
+  		view: new View({
+    	center: [0, 0],
+    	zoom: 1
+  					}),
+  		layers: [
+    	new TileLayer({
+      source: new OSM()
+    	})
+  		],
+  			target: 'map'
+		});
 
       function checkSize() {
         var small = map.getSize()[0] < 600;
