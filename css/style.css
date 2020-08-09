@@ -95,7 +95,7 @@ button:focus {
   padding: 130px 0; }
   @media (max-width: 991px) {
     .section_gap {
-      padding: 70px 0; } }
+      padding: 10px 0; } }
 
 .section_gap_top {
   padding-top: 130px; }
@@ -107,7 +107,7 @@ button:focus {
   padding-bottom: 130px; }
   @media (max-width: 991px) {
     .section_gap_bottom {
-      padding-bottom: 70px; } }
+      padding-bottom: 10px; } }
 
 /* Main Title Area css
 ============================================================================================ */
@@ -3284,7 +3284,7 @@ h6 {
   .footer-area .single-footer-widget .form-wrap {
     margin-top: 25px; }
   .footer-area .single-footer-widget input {
-    height: 20px;
+    height: 40px;
     border: none;
     width: 80% !important;
     font-weight: 300;
